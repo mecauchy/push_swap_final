@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 20:45:56 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/15 12:57:33 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:18:11 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typedef struct s_stack
 	int				nb;
 	int				index;
 	struct s_stack	*next;
-	struct s_stack	*prev;
 }				t_stack;
 
 // ---------------------------------------------------------------------------
@@ -40,7 +39,6 @@ t_stack	*ft_lstnew(int nb);
 t_stack	*ft_lstlast(t_stack *lst);
 int		ft_lstsize(t_stack *lst);
 t_stack	*lst_before_last(t_stack *lst);
-void	print_lst(t_stack *lst);
 
 t_stack	*_lst(void);
 

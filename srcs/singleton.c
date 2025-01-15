@@ -6,25 +6,24 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 20:45:38 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/15 12:09:05 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:18:22 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_stack	*_lst(void)
-{
-	static t_stack	stack;
-	static int		init = 0;
+// t_stack	*_lst(void)
+// {
+// 	static t_stack	stack;
+// 	static int		init = 0;
 
-	if (init == 0)
-	{
-		init = 1;
-		stack.next = NULL;
-		stack.prev = NULL;
-	}
-	return (&stack);
-}
+// 	if (init == 0)
+// 	{
+// 		init = 1;
+// 		stack.next = NULL;
+// 	}
+// 	return (&stack);
+// }
 // void	free_lst(void)
 // {
 // 	t_stack	*tmp;

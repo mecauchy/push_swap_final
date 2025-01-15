@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 20:45:46 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/15 14:38:10 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:13:05 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,7 @@ int	main(int ac, char **av)
 	check_arg(ac, av);
 	stack_a = initialize_stack(ac, av);
 	stack_b = NULL;
-	print_lst(stack_a);
 	push_swap(&stack_a, &stack_b);
-	print_lst(stack_a);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

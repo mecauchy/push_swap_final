@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:08:16 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/15 12:39:05 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:18:05 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ t_stack	*ft_lstnew(int nb)
 		return (NULL);
 	new->nb = nb;
 	new->next = NULL;
-	new->prev = NULL;
 	return (new);
 }
 
