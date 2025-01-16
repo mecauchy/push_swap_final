@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 20:45:46 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/16 15:36:26 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:23:05 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ int	main(int ac, char **av)
 	t_stack	*stack_b;
 
 	if (ac < 2)
-		exit (1);
+		// exit (0);
+		return (0);
 	check_arg(ac, av);
 	stack_a = initialize_stack(ac, av);
 	stack_b = NULL;

@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:46:40 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/16 15:09:25 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:30:09 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,10 @@ void	check_arg(int ac, char **av)
 	if (!av[1][i])
 		exit(0);
 	if (ac == 2)
+	{
+		
 		check = ft_split(av[1], ' ');
+	}
 	else
 	{
 		i = 1;

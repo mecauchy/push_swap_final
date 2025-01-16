@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 12:07:38 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/16 15:11:33 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:24:05 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ t_stack	*initialize_stack(int ac, char **av)
 	t_stack	*stack_a;
 	int		i;
 	char	**new_lst;
-
+	
 	if (ac == 2)
 	{
 		new_lst = ft_split(av[1], ' ');
