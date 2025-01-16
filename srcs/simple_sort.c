@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 15:35:22 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/15 12:40:03 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:45:30 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,9 @@ void	sort_5(t_stack **stack_a, t_stack **stack_b)
 
 	if (ft_lstsize(*stack_a) > 5)
 		return ;
-	min = find_min(*stack_a);
+	min = quick_find_min(*stack_a);
 	push_to_b(stack_a, stack_b, min);
-	next_min = find_min(*stack_a);
+	next_min = quick_find_min(*stack_a);
 	push_to_b(stack_a, stack_b, next_min);
 	sort_3(stack_a);
 	pa(stack_b, stack_a);

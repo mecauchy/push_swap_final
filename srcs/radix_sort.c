@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 13:17:44 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/15 12:37:59 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:58:52 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 
 	i = 0;
 	size = ft_lstsize(*stack_a);
-	max = max_bits(stack_a);
+	max = max_index_bits(stack_a);
 	while (i < max)
 	{
 		j = 0;
 		while (j++ < size)
 		{
-			tmp = *stack_a;
-			if (((tmp->nb >> i) & 1) == 1)
+			tmp = (*stack_a);
+			if (((tmp->index >> i) & 1) == 1)
 				ra(stack_a);
 			else
 				pb(stack_b, stack_a);
@@ -43,6 +43,6 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 		ft_putback_in_stack(stack_a, stack_b);
 		i++;
 	}
-	while ((*stack_a)->nb != find_min(*stack_a))
+	while ((*stack_a)->index != find_index_min(*stack_a))
 		ra(stack_a);
 }

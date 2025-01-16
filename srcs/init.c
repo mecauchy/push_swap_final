@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 12:07:38 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/15 12:39:30 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/16 15:11:33 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_error(char *exit_msg)
 		write(1, &exit_msg[i], 1);
 		i++;
 	}
-	exit(0);
+	exit(1);
 }
 
 char	**ft_free(char **to_free)

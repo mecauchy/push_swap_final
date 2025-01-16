@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 20:45:46 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/15 15:13:05 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/16 15:36:26 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	push_swap(t_stack **stack_a, t_stack **stack_b)
 	int	stack_size;
 
 	stack_size = ft_lstsize(*stack_a);
+	sort_indice(*stack_a);
 	if (!is_sorted(stack_a) && stack_size == 2)
 		sa(stack_a);
 	else if (!is_sorted(stack_a) && stack_size == 3)
@@ -52,7 +53,7 @@ int	main(int ac, char **av)
 	t_stack	*stack_b;
 
 	if (ac < 2)
-		return (1);
+		exit (1);
 	check_arg(ac, av);
 	stack_a = initialize_stack(ac, av);
 	stack_b = NULL;
