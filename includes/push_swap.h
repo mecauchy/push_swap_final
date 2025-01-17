@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 20:45:56 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/16 15:14:09 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:39:39 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ t_stack	*ft_lstnew(int nb);
 t_stack	*ft_lstlast(t_stack *lst);
 int		ft_lstsize(t_stack *lst);
 t_stack	*lst_before_last(t_stack *lst);
+int		ft_only_sep(char *str, char charset);
 
 // ---------------------------------------------------------------------------
 // 						OPÉRATIONS SUR LES PILES
@@ -94,7 +95,6 @@ void	sort_5(t_stack **stack_a, t_stack **stack_b);
 void	push_to_b(t_stack **stack_a, t_stack **stack_b, int min);
 int		find_max(t_stack *lst);
 int		find_position(t_stack *stack_a, int min);
-int		max_bits(t_stack **lst);
 int		quick_find_min(t_stack *stack_a);
 void	sort_3(t_stack **lst);
 

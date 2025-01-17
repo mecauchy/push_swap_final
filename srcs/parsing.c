@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:46:40 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/16 16:30:09 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/16 19:03:54 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,10 @@ void	validate_argument(char **check, int ac, int i)
 		}
 		tmp = ft_atol(check[i]);
 		if (!check_overflow(tmp))
+		{
+			ft_free(check);
 			ft_error("Error\n");
+		}
 		i++;
 	}
 }
@@ -92,8 +95,9 @@ void	check_arg(int ac, char **av)
 		exit(0);
 	if (ac == 2)
 	{
-		
-		check = ft_split(av[1], ' ');
+		if (ft_only_sep(av[1],' '))
+			exit(0);
+		check = ft_split(av[1], ' ');	
 	}
 	else
 	{

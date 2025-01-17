@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 11:37:21 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/16 15:02:58 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:18:02 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,11 @@ int	find_index_min(t_stack *stack_a)
 
 void	sort_indice(t_stack *stack_a)
 {
-	int		size;
 	int		index;
 	t_stack	*current;
 	t_stack	*compare;
 
 	current = stack_a;
-	size = ft_lstsize(stack_a);
 	while (current)
 	{
 		index = 0;

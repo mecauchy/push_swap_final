@@ -6,7 +6,7 @@
 /*   By: mcauchy- <mcauchy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:11:49 by mcauchy-          #+#    #+#             */
-/*   Updated: 2025/01/15 12:38:11 by mcauchy-         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:39:46 by mcauchy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,17 @@ static char	*ft_wdcpy(char *str, int size)
 	return (dest);
 }
 
+int	ft_only_sep(char *str, char charset)
+{
+	while (*str)
+	{
+		if (*str != charset)
+			return (0);
+		str++;
+	}
+	return (1);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
@@ -68,6 +79,8 @@ char	**ft_split(char const *s, char c)
 	int		j;
 
 	i = 0;
+	if (s == NULL || ft_only_sep((char *)s, c))
+		return (NULL);
 	size = ft_wrdcnt((char *)s, c);
 	str = malloc(sizeof(char *) * (size + 1));
 	if (str == NULL)
